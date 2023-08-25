@@ -25,4 +25,6 @@ sobre errores y excepciones que puedan ocurrir durante la ejecución son muy uti
 comportamiento de la aplicación, identificar problemas y corregirlos de manera efectiva.
 
 ## Bibliografia
-https://www.programarya.com/Cursos/Fundamentacion/Errores
+- https://www.programarya.com/Cursos/Fundamentacion/Errores
+- https://learn.microsoft.com/es-es/visualstudio/debugger/write-better-code-with-visual-studio?view=vs-2022
+- https://www.atlascopco.com/es-mx/itba/industry-solutions/tighteningsolutionsandservices/errorproofingsolutions/top5-mistake-proofing-techniques-to-achieve-first-time-quality
