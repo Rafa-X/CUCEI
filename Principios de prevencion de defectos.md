@@ -29,4 +29,4 @@ Es una tecnica de causa y efecto que sirve como estructura para debates de grupo
   <img width="400"  src="Images/Diagrama_fishbone.jpg" align="center">
 </p>
 
-##¿Qué es Orthogonal Defect Classification (ODC)? <br>
+## ¿Qué es Orthogonal Defect Classification (ODC)? <br>
