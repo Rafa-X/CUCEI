@@ -18,4 +18,15 @@ Una técnica formal y simple que ayuda a priorizar el orden de resolución del p
 Por lo que una vez identificados, se priorizan de acuerdo con la frecuencia y se realiza un análisis estadístico para encontrar cuales son este 20% de razones que se atribuyen la mayoria
 de los problemas.
 
-<img src=![image](https://github.com/Rafa-X/CUCEI-Tolerante-a-fallas/assets/75345733/d1b7d31c-95f3-4885-a4f4-eae179edcb33)>
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="400"  src="Images/Diagrama_pareto.jpg" align="center">
+</p>
+
+4. **Análisis de causa raíz/espina de pescado** <br>
+Es una tecnica de causa y efecto que sirve como estructura para debates de grupo sobre las posibles causas de un problema. Al analizar en profundidad las necesidades es que se pueden reflejar las causas potenciales de un problema creando una representación visual de causas, categorías de causas y necesidades que es el diagrama de espina de pescado:
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="400"  src="Images/Diagrama_fishbone.jpg" align="center">
+</p>
+
+##¿Qué es Orthogonal Defect Classification (ODC)? <br>
