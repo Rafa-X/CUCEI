@@ -1,13 +1,41 @@
 ## Service - Application Blocker
 
-How to create a Windows service which checks apps status (using the psutil library in Python)
+This Windows service 
+[**proc_blocker.py**](https://github.com/Rafa-X/CUCEI-Tolerante-a-fallas/blob/main/Windows%20Services/custom_services/proc_blocker.py) checks apps status and block specified apps, using the psutil library in Python and the NSSM for the installation.
 
-1. The first step is to create the application we want to deploy as a service, in this case I created an application blocker named [**proc_blocker.py**](https://github.com/Rafa-X/CUCEI-Tolerante-a-fallas/blob/main/Windows%20Services/custom_services/proc_blocker.py). This application gets as an argument the name of the executables of the apps that the user is calling to open, then evaluates if it's one of the blocked apps, specified when the service is installed, and kill it before it starts.
+When the service is installed there is needed to specify the names of the objective apps, those are saved in a list of **targets**.
+<p align="center" style="margin-bottom: 0px !important;">
+    <img width=70% src="../Images/WinService part 1.png" align="center">
+</p>
 
-2. Once the service application is ready, there is needed to install the service. In this case made it through the [**NSSM - Non-Sucking Service Manager**](https://nssm.cc/). This free tool allows us to install, start, stop and unistall Windows services through an interface with several tools for setting up the service.
-    1) Download the NSSM file and move its .exe to a folder in the C: directory (in this case *C:\custom_services\*) <br>
-       <p align="center" style="margin-bottom: 0px !important;">
-           <img width="400"  src="../Images/cmd.png" align="center">
-       </p>
-    2) 
-3. 
+When an app is opened, an executable is called and the service catch the name of it, here is where the comparison happens. Using a psutil method: .process_iter which returns an iterator yielding a process class instances for all the running processes, this is compared to the **targets** list checking if there is an app to block.
+<p align="center" style="margin-bottom: 0px !important;">
+    <img width=70% src="../Images/WinService part 2.png" align="center">
+</p>
+
+## Steps
+1. The first step is to create the application we want to deploy as a service, in this case the app blocker [**proc_blocker.py**](https://github.com/Rafa-X/CUCEI-Tolerante-a-fallas/blob/main/Windows%20Services/custom_services/proc_blocker.py).
+
+2. For the app to be installed I used this free tool called [**NSSM - Non-Sucking Service Manager**](https://nssm.cc/), this allows us to install, start, stop and unistall Windows services through an interface with several tools for setting up the service.
+   
+3. Move the app file and the NSSM executable in the same folder of the root directory. In my case will be: *C:\custom_services\*.
+
+4. Now in a console as administrator run the NSSM and begin the installation of the service:
+    <p align="center" style="margin-bottom: 0px !important;">
+        <img width="400"  src="../Images/NSSM cmd.png" align="center">
+    </p>
+    and this, the NSSM installation form will open:
+    <p align="center" style="margin-bottom: 0px !important;">
+        <img width="400" src="../Images/NSSM form.png" align="center">
+    </p>
+
+5. Now for the setting up of the service in the form, it's needed to specify 3 things:
+   - **Path**: Indicates the directory of the Python interpreter.
+   - **Startup directory**: Indicates the directory in which is located the service code. In my case: C:\custom_services\ 
+   - **Arguments**: Name of the executables to block, for example: proclocker.py chrome.exe firefox.exe.
+
+   <p align="center" style="margin-bottom: 0px !important;">
+       <img width="400" src="../Images/NSSM form filled.png" align="center">
+   </p>
+
+6. 
