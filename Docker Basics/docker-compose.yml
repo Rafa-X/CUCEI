@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  faker-service:
+    restart: always  #restart when API error ocurrs
+    build: ./   #build in base the Dockerfile
+    volumes:
+     - /usr/src/app  #copy all the info in the root
+    ports:
+     - 5000:3000  #port to comunicate the faker-service - local_machine:container
+    networks:
+     - app-tier   #network of the containers
+    container_name: service_fake_data
+
+networks:  #network for the app container
+  app-tier:
+    driver: bridge
+volumes:
+  database-data:
