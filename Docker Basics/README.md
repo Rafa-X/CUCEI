@@ -13,16 +13,22 @@ This random data is from the Faker method .profile(), gets **n** characteristics
 1. To create the container and the image of the project there are no need to execute a bunch of commands, just run the **docker-compose** file:
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="150"  src="images/command1.png" align="center">
-  <img width="150"  src="images/container_image.png" align="center">
+  <img width="500"  src="images/container_image.png" align="center">
 </p>
 
 2. The service only runs locally, as specified in the **docker-compose** file, the faker service runs in the port **3000**:
 <p align="center" style="margin-bottom: 0px !important;">
-  <img width="400"  src="images/port_faker.png" align="center">
+  <img width="350"  src="images/port_faker.png" align="center">
 </p>
 
 3. And the port to access the functions on the web browser is the **5000**:  (while the port of the container is also the 3000)
-<br>
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600"  src="images/docker_compose.png" align="center">
+</p>
+
+<br>
+## RESULTADOS IMPRESOS EN NAVEGADOR WEB <br>
+Como se menciono antes, al ejecutarse localmente debe especificar el URL como: **http://localhost:5000/create_registers** el argumento despues del ultimo slash llama a la funcion para crear la informacion de Faker. <br>
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="400"  src="images/results.png" align="center">
 </p>
