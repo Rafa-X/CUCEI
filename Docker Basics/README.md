@@ -1,5 +1,5 @@
 ## Docker Basic App
-The goal with this app is to underteand the elemental way to work with docker and apps. Creates the containers and the images using a **docker-compose** file, then displays a series of random data created with the module "Faker". <br>
+The goal with this app is to understeand the elemental way to work with docker and apps. Creates the containers and the images using a **docker-compose** file, then displays a series of random data created with the module "Faker". <br>
 
 This random data is from the Faker method .profile(), gets **n** characteristics that a persons profile can contain.
 
