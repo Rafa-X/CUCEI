@@ -38,6 +38,3 @@ pm2 plus  (this runs the Monitoring Web Interface)
 <p align="center" style="margin-bottom: 0px !important;">
   <img width=70% src="images/test_1.png" align="center">
 </p>
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width=70% src="images/test_2.png" align="center">
-</p>
