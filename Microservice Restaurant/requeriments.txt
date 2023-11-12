@@ -1,0 +1,11 @@
+For the app production with DOCKER or PM2 (or pm2+: web runtime process manager) will need this:
+
+npm install
+
+npm i -g pm2  
+npm install -g nodemon
+
+npm install axios
+npm install cote
+npm install body-parser
+npm install express --save
