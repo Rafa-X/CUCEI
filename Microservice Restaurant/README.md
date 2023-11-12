@@ -8,7 +8,7 @@ npm install
 RUN npm i -g pm2  
 RUN npm install -g nodemon
 ```
-### Serives Modules
+### Services Modules
 <p align="center" style="margin-bottom: 0px !important;">
   <img  src="images/requeriments.png" align="center">
 </p>
@@ -28,11 +28,16 @@ pm2 plus  (this runs the Monitoring Web Interface)
 
 ## TEST RESULTS - PM2
 <p align="center" style="margin-bottom: 0px !important;">
-  <img  src="images/pm2_start.png" align="center">
+  <img width=80% src="images/pm2_start.png" align="center">
+</p>
+<p align="left"> 
+  Here is executed a node with the test.js which sends a request to the restaurant service, with the following order to an specific restaurant, then pass it to the
+  delivery service in which it gaves an ID_delivery and set the status to "pending"
+  <img width=70% src="images/order.png" align="center">
 </p>
 <p align="center" style="margin-bottom: 0px !important;">
-  <img  src="images/test_1.png" align="center">
+  <img width=70% src="images/test_1.png" align="center">
 </p>
 <p align="center" style="margin-bottom: 0px !important;">
-  <img  src="images/test_2.png" align="center">
+  <img width=70% src="images/test_2.png" align="center">
 </p>
