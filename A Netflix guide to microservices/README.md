@@ -113,3 +113,26 @@ Netflix realized that solutions aren’t first, organization is first for drivin
  - **Lessons**
    + Solutions first, teams second
    + Reconfigure teams to best support the architecture
+
+
+## References
+- Mastering Chaos - A Netflix Guide to Microservices
+https://www.youtube.com/watch?v=CZ3wIuvmHeM
+- Microservicios y arquitectura de microservicios
+https://www.intel.la/content/www/xl/es/cloud-computing/microservices.html
+- ¿Qué son los microservicios?
+https://aws.amazon.com/es/microservices/#:~:text=Caracter%C3%ADsticas%20de%20los%20microservicios&text=Cada%20servicio%20componente%20en%20una,o%20implementaciones%20con%20otros%20servicios.
+- How Failures Cascade in Software Systems
+https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=10483&context=etd
+- Introducing Hystrix for Resilience Engineering
+https://netflixtechblog.com/introducing-hystrix-for-resilience-engineering-13531c1ab362
+- What is eventual consistency?
+https://www.voltactivedata.com/blog/2022/09/what-is-eventual-consistency/
+- Stateful vs Stateless Architecture
+https://www.virtasant.com/blog/stateful-vs-stateless-architecture-why-stateless-won
+- Scalability
+https://www.educative.io/blog/scalable-systems-101#scalability
+- Cost Variance (CV) and Schedule Variance (SV)
+https://www.geeksforgeeks.org/software-engineering-cost-variance-cv-and-schedule-variance-sv/
+- Conway’s Law
+https://www.atlassian.com/blog/teamwork/what-is-conways-law-acmi
