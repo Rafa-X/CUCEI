@@ -24,9 +24,29 @@ There were several critical things that encourages the software architects to cr
 -	Virtualization and elasticity: Microservices are way to easier to manage in this kind of virtualized environment, because there is needed to automate operations as well the on-demand provisioning.
 
 ## Microservices and abstraction
-Microservices are essentially an abstraction. From a simple point of view this kind of system may look like a horizontal scaled microservice, but its not that simple. Database, stored data, service client, client cache all of it are a bunch of machines working together responding to the client’s application in which are embedded. 
+Microservices are essentially an abstraction. From a simple point of view this kind of system may look like a horizontal scaled microservice, but it's not that simple. Database, stored data, service client, client cache all of it are a bunch of machines working together responding to the client’s application in which are embedded. 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width=45% src="images/microservice_abstraction.png" align="center">
+</p>
+
+Its important to realize that this set of technologies is a microservice, not this simple stateless thing which is nice from a user perspective, but it actually has these sorts of complex structures. 
+
+## Cascading failure and Histrix
+This disaster scenario in which one service fails and make others to fail too. Improper defenses cause a service to fail and scale to a cascade failure which can ends taking down the entire service. One single service may not affect severely the others, but actually increases the probability that the others components does, the more components fail, the greater the probability of a service failure.
+
+To deal with this Netflix created Hystrix, a library designed to control the interactions between these distributed services, it was created and evolved out of the need for resiliency, greater tolerance of latency and failure. It does this by isolating points of access between the services, stopping cascading failures across them, and providing fallback options, all of which improve the system’s overall resiliency.
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width=45% src="images/hystrix_flow_chart.png" align="center">
+</p>
+
+## Network Partition
+In the presence of a network partition, must be choose between consistency and availability. What if a connection to some component can’t be reached, its better to just let it fail and give back an error, or connect to the ones can be reached and then fix it up backwards.
+
+Netflix choose the latter and solve this by using the NoSQL distributed database Cassandra, embracing the concept of “Eventual Consistency”, which means the ensuring that the updates made to distributed NoSQL databases will eventually be reflected across all nodes.
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width=45% src="images/eventual_consistency.png" align="center">
 </p>
 
