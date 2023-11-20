@@ -41,12 +41,19 @@ To deal with this Netflix created Hystrix, a library designed to control the int
   <img width=45% src="images/hystrix_flow_chart.png" align="center">
 </p>
 
+## Critical services
+Microservices have two types of importance in services: normal services and critical services. The first ones are all that give added value to the service but are not essential, this is the main difference with the seconds, these are necessary to have the basic functionality work.
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width=30% src="images/critical_micro.png" align="center">
+</p>
+
 ## Network Partition
 In the presence of a network partition, must be choose between consistency and availability. What if a connection to some component can’t be reached, its better to just let it fail and give back an error, or connect to the ones can be reached and then fix it up backwards.
 
 Netflix choose the latter and solve this by using the NoSQL distributed database Cassandra, embracing the concept of “Eventual Consistency”, which means the ensuring that the updates made to distributed NoSQL databases will eventually be reflected across all nodes.
 
 <p align="center" style="margin-bottom: 0px !important;">
-  <img width=45% src="images/eventual_consistency.png" align="center">
+  <img width=35% src="images/eventual_consistency.png" align="center">
 </p>
 
