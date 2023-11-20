@@ -57,3 +57,59 @@ Netflix choose the latter and solve this by using the NoSQL distributed database
   <img width=35% src="images/eventual_consistency.png" align="center">
 </p>
 
+## Scaling
+Capacity of handling rapid changes to workloads and user demands by increasing the number of components and/or their power. There are two types of scaling: <br>
+1. **Vertical scaling** means adding more resources to the existing nodes. Is often the simplest solution as it doesn’t require any complex code extensions or configurations, you are just increasing the available computational power, RAM, and bandwidth of the existing nodes.
+2. **Horizontal scaling** refers to adding more nodes, such as servers or routers, of comparable hardware to increase the available resources of a system. It is much easier and cost-effective to add more servers and/or set up additional data centers than make one server extremely powerful.
+3. **Hybrid scaling** overcome the limitations of vertical and horizontal scaling by incorporating elements of both strategies allowing businesses to scale either need performance or additional capacity. By strategically balancing vertical and horizontal scaling, organizations can optimize costs based on their specific workload and at the same time providing redundancy by using multiple servers, reducing the risk of system failures and ensuring high availability.
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width=35% src="images/scaling.png" align="center">
+</p>
+
+- **Stateful services**: databases and caches, maintains an internal state that records information about sessions, transactions or any other interactions. These services can be returned to again and again without losing data. Store additional information server-side, on the bank’s server, recording the state of the current transaction and waiting for the next instructions.
+- **Stateless services**: frequently accessed metadata, as it is cached in memory is one of the few non-volatile pieces of information that this kind keeps. Store additional information client-side, in your web browser, passing along additional information with each step ‘reminding’ the server of the previous steps.
+Losing a node is a non-event, because it recovers very quickly just by booting up a new one to replace de bad node.
+
+## Cost and Scheduled Variance
+Cost variance, also known as budget variance, deals with the budget of the software development. Is the difference of the actual cost and the budgeted cost or in other words it is difference between what was expected to be spent and what was actually spent.
+
+Schedule variance is basically used to indicate whether a project is running ahead or behind. It is the difference of Budgeted Cost of Work Performed (BCWP) and Budgeted Cost of Work Scheduled (BCWS). Schedule variance is computed by calculating the difference between Earned Value and Planned Value.
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width=35% src="images/cost_variance.png" align="center">
+</p>
+
+## Before stream existed = electronic delivery
+In the early days Netflix had a team called electronic delivery, that was the first version of streaming. This first version of the system was developed under the same organization, the client team and the server team were working really tight releasing this design:
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width=35% src="images/electronic_delivery.png" align="center">
+</p>
+
+But in parallel, the Netflix API was created for the DVD business to try and stimulate external applications that would drive traffic back to Netflix, and really happens a thousand of new videos business were born but it didn’t generate a huge amount of value to Netflix. <br>
+However, this API actually helped with their UI innovation, containing content metadata about all the movies that were available, with a generalized REST API, JSON schema, HTTPS responses, XML, an Oauth security end more, feeling like a much modern architecture.
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width=35% src="images/API_2010.png" align="center">
+</p>
+
+## Conway’s Law
+Organizations which design systems are constrained to produce designs which are copies of the communication structures of its organization.
+
+```Any piece of software reflects the organizational structure that produced it```
+
+Netflix realized that solutions aren’t first, organization is first for driving the architecture they had. Components like the API, NCCP, gateway, legacy devices all that mess means nothing without a right organization, and for that they developed an architecture called “Blade Runner”. Decomposing capabilities of certain components and integrating them in others, so the appropriate piece were pushed in to a new smaller microservices that contained more fundamental capabilities. 
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width=35% src="images/blade_runner.png" align="center">
+</p>
+
+## Outcomes and Lessons
+- **Outcomes**
+  + Productivity and new capabilities by unifying the components
+  + Refactored team organization when API's were introduced to suit better the new technologies
+
+ - **Lessons**
+   + Solutions first, teams second
+   + Reconfigure teams to best support the architecture
