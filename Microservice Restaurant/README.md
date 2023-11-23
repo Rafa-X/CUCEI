@@ -19,6 +19,10 @@ RUN npm install -g nodemon
 cd "Microservice Restaurant"
 docker-compose up
 ```
+#### Test example request
+```
+node test.js
+```
 
 ### PM2 - Production process manager,  manage and keep an application online
 ```
@@ -27,16 +31,18 @@ pm2 plus  (this runs the Monitoring Web Interface)
 ```
 
 ## TEST RESULTS - PM2
+First, run the process manager PM2 with a .json file containing the gateway and services names
 <p align="center" style="margin-bottom: 0px !important;">
   <img width=80% src="images/pm2_start.png" align="center">
 </p>
-<p align="left"> 
-  Here is executed a node with the test.js which sends a request to the restaurant service, with the following order to an specific restaurant, then pass it to the
-  delivery service in which it gaves an ID_delivery and set the status to "pending.
-</p>
+
+### Test Results
+Execute a node with the **test.js** file, this sends a request to the restaurant service, with the following order to an specific restaurant:
 <p align="center" style="margin-bottom: 0px !important;">
   <img src="images/order.png" align="center">
 </p>
+
+Then pass it to the delivery service in which it gaves an ID_delivery and set the delivery status to pending:
 <p align="center" style="margin-bottom: 0px !important;">
   <img width=70% src="images/test_1.png" align="center">
 </p>
