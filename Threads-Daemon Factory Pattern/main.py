@@ -28,10 +28,7 @@ thread_obj_2 = threading.Thread(
 thread_obj_1.start()
 thread_obj_2.start()
 
-# check if the thread is alive (finish is job or error)
-# in this case if one thread is dead the all thread shut down
-
-while(True):
+while(True):  # check if the thread is alive (finish only when an error)
     time.sleep(1)
     if thread_obj_2.is_alive() == None:
         break
