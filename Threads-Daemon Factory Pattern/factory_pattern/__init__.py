@@ -1,1 +1,0 @@
-from factory_pattern.factory import FactoryClass
