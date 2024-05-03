@@ -80,7 +80,7 @@ Schedule variance is basically used to indicate whether a project is running ahe
 In the early days Netflix had a team called electronic delivery, that was the first version of streaming. This first version of the system was developed under the same organization, the client team and the server team were working really tight releasing this design:
 
 <p align="center" style="margin-bottom: 0px !important;">
-  <img width=60% src="../Images/electronic_delivery.png" align="center">
+  <img width=35% src="../Images/electronic_delivery.png" align="center">
 </p>
 
 But in parallel, the Netflix API was created for the DVD business to try and stimulate external applications that would drive traffic back to Netflix, and really happens a thousand of new videos business were born but it didn’t generate a huge amount of value to Netflix. <br>
